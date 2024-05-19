@@ -315,12 +315,20 @@ h6 {
   z-index: 50;
   min-height: 3.75rem;
   align-content: center;
-  background-color: rgba(255,255,255,.75)
+  background-color: rgba(255,255,255,.9)
 }
 @media (min-width:47.99875em) {
   .header {
     min-height: 5rem
   }
+}
+.header._header-scroll {
+  position: fixed;
+  top: -200%
+}
+.header._header-show {
+  transition: top .3s;
+  top: 0
 }
 .header__container {
   display: flex;
