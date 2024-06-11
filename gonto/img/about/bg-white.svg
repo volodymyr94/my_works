@@ -1,0 +1,7 @@
+<svg width="1440" height="80" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_1_807" fill="white">
+<path d="M0 24C0 10.7452 10.7452 0 24 0H1416C1429.25 0 1440 10.7452 1440 24V80H0V24Z"/>
+</mask>
+<path d="M0 24C0 10.7452 10.7452 0 24 0H1416C1429.25 0 1440 10.7452 1440 24V80H0V24Z" fill="white"/>
+<path d="M0 24C0 10.1929 11.1929 -1 25 -1H1415C1428.81 -1 1440 10.1929 1440 24C1440 11.2975 1429.25 1 1416 1H24C10.7452 1 0 11.2975 0 24ZM1440 80H0H1440ZM0 80V0V80ZM1440 0V80V0Z" fill="#999896" mask="url(#path-1-inside-1_1_807)"/>
+</svg>
