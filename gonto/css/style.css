@@ -417,6 +417,7 @@ h4 {
   max-width: 36.875rem
 }
 .hero__title {
+  margin-top: 6.25rem;
   color: #fff;
   font-size: 3.3125rem;
   line-height: 3.5rem
