@@ -230,6 +230,10 @@ textarea.input {
   color: #fff;
   border: 1px solid #fff
 }
+.button__center {
+  display: block;
+  margin: 0 auto
+}
 h2 {
   text-align: center;
   font-weight: 400
@@ -238,10 +242,29 @@ h3 {
   font-size: 1.4375rem;
   line-height: 2rem
 }
+h4 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: .9375rem
+}
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
   background-color: #1d1d1b;
   color: #fff;
   border-bottom: 1px solid #fff
+}
+.header._header-scroll {
+  position: fixed;
+  top: -200%;
+  width: 100%
+}
+.header._header-show {
+  transition: top .3s;
+  top: 0
 }
 .header__container {
   display: flex;
@@ -408,7 +431,7 @@ h3 {
 .hero__text:not(:last-child) {
   margin-bottom: 1.875rem
 }
-.hero__buttton:not(:last-child) {
+.hero__button:not(:last-child) {
   margin-bottom: .9375rem
 }
 .hero__label {
@@ -598,7 +621,7 @@ h3 {
   align-items: center;
   justify-content: center
 }
-.button {
+.black__button {
   margin: 12.5rem 0
 }
 .pink {
@@ -686,6 +709,100 @@ h3 {
   height: .8125rem;
   flex: 0 0 .875rem;
   margin-top: .125rem
+}
+.sign {
+  background-color: #1d1d1b;
+  color: #fff
+}
+.sign__container {
+  display: flex;
+  flex-direction: column
+}
+.sign__text {
+  margin: 0 auto;
+  max-width: 60rem;
+  text-align: center
+}
+.sign__text:not(:last-child) {
+  margin-bottom: 1.875rem
+}
+.finance__items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  -webkit-column-gap: .5rem;
+  -moz-column-gap: .5rem;
+  column-gap: .5rem;
+  row-gap: 1rem;
+  margin-bottom: 2.5rem
+}
+.header-finance {
+  margin-bottom: 3.75rem
+}
+.header-finance__button-main {
+  border: 1px solid #000;
+  background-color: #efe9fe;
+  margin-bottom: .625rem;
+  border-radius: .375rem
+}
+.header-finance__button:first-child {
+  border: 1px solid #000;
+  border-radius: .375rem 0 0 .375rem
+}
+.header-finance__button:nth-child(2) {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-radius: 0
+}
+.header-finance__button:last-child {
+  border: 1px solid #000;
+  border-radius: 0 .375rem .375rem 0
+}
+.header-finance__buttons {
+  display: flex;
+  justify-content: center
+}
+.item-finance {
+  border-radius: .375rem;
+  aspect-ratio: 180/190;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #1d1d1b;
+  width: 11.25rem;
+  overflow: hidden
+}
+.item-finance__lable {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: .625rem;
+  background-color: #efe9fe;
+  color: #000;
+  font-size: .75rem;
+  font-weight: 300;
+  text-transform: uppercase
+}
+.item-finance__imeg {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.item-finance__text {
+  padding-left: .9375rem;
+  padding-right: .9375rem
+}
+.item-finance__text p {
+  color: #636360;
+  font-size: .8125rem;
+  font-weight: 300;
+  line-height: 1.3125rem;
+  margin-bottom: .9375rem;
+  display: flex;
+  justify-content: center;
+  text-align: center
 }
 @media (min-width:61.99875em) {
   .hero {
@@ -817,6 +934,12 @@ h3 {
   .item-pink__more {
     padding-bottom: 2.8125rem
   }
+  .sign {
+    padding-bottom: 5rem
+  }
+  .finance {
+    margin-bottom: 5rem
+  }
 }
 @media (max-width:50em) {
   .footer__columns {
@@ -939,6 +1062,12 @@ h3 {
   .item-pink__more {
     padding-bottom: 1.25rem
   }
+  .sign {
+    padding-bottom: 2.5rem
+  }
+  .finance {
+    margin-bottom: 3.125rem
+  }
 }
 @media (max-width:68.375em) {
   .about__items {
@@ -1051,6 +1180,26 @@ h3 {
   .pink__items {
     grid-template-columns: auto
   }
+  .header-finance__button {
+    display: block;
+    border-radius: .375rem;
+    border: 1px solid #000
+  }
+  .header-finance__button:first-child {
+    border-radius: .375rem
+  }
+  .header-finance__button:nth-child(2) {
+    border-radius: .375rem
+  }
+  .header-finance__button:last-child {
+    border-radius: .375rem
+  }
+  .header-finance__buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: .625rem
+  }
 }
 @media (max-width:47.99875em) and (any-hover:none) {
   .icon-menu {
@@ -1068,7 +1217,7 @@ h3 {
   .header__buttton--2 {
     color: #000
   }
-  .hero__buttton {
+  .hero__button {
     width: 100%
   }
   .about__items {
@@ -1079,12 +1228,25 @@ h3 {
   }
   .galary__items {
     grid-template-columns: 1fr;
-    margin: 0 -.9375rem
+    margin: 0 -.9375rem;
+    padding-bottom: 3.4375rem
   }
 }
 @media (max-width:29.99875em) and (max-width:20em) {
   .header__buttton--1 {
     font-size: 1.1875rem
+  }
+  .header__buttton--1 {
+    padding-top: .625rem
+  }
+  .header__buttton--1 {
+    padding-bottom: .625rem
+  }
+  .header__buttton--1 {
+    padding-left: .625rem
+  }
+  .header__buttton--1 {
+    padding-right: .625rem
   }
   .header__buttton--2 {
     font-size: 1.1875rem
@@ -1451,10 +1613,42 @@ h3 {
       padding-bottom: calc(1.25rem + 1.5625 * (100vw - 20rem)/ 56.875)
     }
   }
+  @supports (padding-bottom:clamp(2.5rem ,1.6208791209rem + 4.3956043956vw ,5rem)) {
+    .sign {
+      padding-bottom: clamp(2.5rem ,1.6208791209rem + 4.3956043956vw ,5rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(2.5rem ,1.6208791209rem + 4.3956043956vw ,5rem)) {
+    .sign {
+      padding-bottom: calc(2.5rem + 2.5 * (100vw - 20rem)/ 56.875)
+    }
+  }
+  @supports (margin-bottom:clamp(3.125rem ,2.4656593407rem + 3.2967032967vw ,5rem)) {
+    .finance {
+      margin-bottom: clamp(3.125rem ,2.4656593407rem + 3.2967032967vw ,5rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(3.125rem ,2.4656593407rem + 3.2967032967vw ,5rem)) {
+    .finance {
+      margin-bottom: calc(3.125rem + 1.875 * (100vw - 20rem)/ 56.875)
+    }
+  }
 }
 @media (max-width:29.99875em) and (min-width:76.875em) {
   .header__buttton--1 {
     font-size: 1.5rem
+  }
+  .header__buttton--1 {
+    padding-top: .9375rem
+  }
+  .header__buttton--1 {
+    padding-bottom: .9375rem
+  }
+  .header__buttton--1 {
+    padding-left: 1.25rem
+  }
+  .header__buttton--1 {
+    padding-right: 1.25rem
   }
   .header__buttton--2 {
     font-size: 1.5rem
@@ -1469,6 +1663,46 @@ h3 {
   @supports not (font-size:clamp(1.1875rem ,1.0776098901rem + 0.5494505495vw ,1.5rem)) {
     .header__buttton--1 {
       font-size: calc(1.1875rem + .3125 * (100vw - 20rem)/ 56.875)
+    }
+  }
+  @supports (padding-top:clamp(0.625rem ,0.5151098901rem + 0.5494505495vw ,0.9375rem)) {
+    .header__buttton--1 {
+      padding-top: clamp(.625rem ,.5151098901rem + .5494505495vw ,.9375rem)
+    }
+  }
+  @supports not (padding-top:clamp(0.625rem ,0.5151098901rem + 0.5494505495vw ,0.9375rem)) {
+    .header__buttton--1 {
+      padding-top: calc(.625rem + .3125 * (100vw - 20rem)/ 56.875)
+    }
+  }
+  @supports (padding-bottom:clamp(0.625rem ,0.5151098901rem + 0.5494505495vw ,0.9375rem)) {
+    .header__buttton--1 {
+      padding-bottom: clamp(.625rem ,.5151098901rem + .5494505495vw ,.9375rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(0.625rem ,0.5151098901rem + 0.5494505495vw ,0.9375rem)) {
+    .header__buttton--1 {
+      padding-bottom: calc(.625rem + .3125 * (100vw - 20rem)/ 56.875)
+    }
+  }
+  @supports (padding-left:clamp(0.625rem ,0.4052197802rem + 1.0989010989vw ,1.25rem)) {
+    .header__buttton--1 {
+      padding-left: clamp(.625rem ,.4052197802rem + 1.0989010989vw ,1.25rem)
+    }
+  }
+  @supports not (padding-left:clamp(0.625rem ,0.4052197802rem + 1.0989010989vw ,1.25rem)) {
+    .header__buttton--1 {
+      padding-left: calc(.625rem + .625 * (100vw - 20rem)/ 56.875)
+    }
+  }
+  @supports (padding-right:clamp(0.625rem ,0.4052197802rem + 1.0989010989vw ,1.25rem)) {
+    .header__buttton--1 {
+      padding-right: clamp(.625rem ,.4052197802rem + 1.0989010989vw ,1.25rem)
+    }
+  }
+  @supports not (padding-right:clamp(0.625rem ,0.4052197802rem + 1.0989010989vw ,1.25rem)) {
+    .header__buttton--1 {
+      padding-right: calc(.625rem + .625 * (100vw - 20rem)/ 56.875)
     }
   }
   @supports (font-size:clamp(1.1875rem ,1.0776098901rem + 0.5494505495vw ,1.5rem)) {
@@ -1522,6 +1756,9 @@ h3 {
     transform: scale(1.02)
   }
   .item-galary__title a:hover {
+    text-decoration: underline
+  }
+  .item-finance__title a:hover {
     text-decoration: underline
   }
 }

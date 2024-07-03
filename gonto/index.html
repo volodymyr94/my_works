@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240612210511">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240703180509">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +14,16 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll="120" data-scroll-show class="header">
 			<div class="header__container">
 				<div class="header__menu menu">
 					<img class="header__logo" src="img/logo.svg" alt="logo">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Solutions</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Product</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Resources</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
+							<li data-goto=".about" class="menu__item"><a href="#" class="menu__link">Solutions</a></li>
+							<li data-goto=".galary" class="menu__item"><a href="#" class="menu__link">Product</a></li>
+							<li data-goto=".finance" class="menu__item"><a href="#" class="menu__link">Resources</a></li>
+							<li data-goto=".sign" class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -39,11 +39,11 @@
 			<section class="page__hero hero">
 				<div class="hero__container">
 					<div class="hero__content">
-						<div class="hero__title">The account that means business</div>
+						<h1 class="hero__title">The account that means business</h1>
 						<div class="hero__text">
 							<p>Pay, get paid, invoice, bookkeep, manage expenses & oversee cash flow. All online in one smart app.</p>
 						</div>
-						<button type="button" class="hero__buttton button button__white">Open an account</button>
+						<button type="button" class="hero__button button button__white">Open an account</button>
 						<div class="hero__label">From €9/month excl. VAT. Try it free for 30 days with no obligations.</div>
 					</div>
 				</div>
@@ -159,12 +159,122 @@
 						</article>
 
 					</div>
-					<button type="button" class="galary__button button  button__black">Get started</button>
+					<button type="button" class="galary__button button  button__black button__center">Get started</button>
 				</div>
 			</section>
 
 			<section class="page__black black">
 				<button type="button" class="black__button button  button__black">Discover our cards</button>
+			</section>
+
+			<section class="page__finance finance">
+				<div class="finance__container">
+					<h2 class="finance__title">All your finance modules in one app</h2>
+					<div class="finance__header header-finance">
+						<button type="button" class=" header-finance__button-main button  button__white button__center">Business Account & Cards</button>
+						<div class="header-finance__buttons">
+							<button type="button" class="header-finance__button button  button__white ">Invoice Management</button>
+							<button type="button" class="header-finance__button button  button__white ">Expense & Spend Management</button>
+							<button type="button" class="header-finance__button button  button__white ">Bookkeeping & Cash Flow</button>
+						</div>
+					</div>
+					<div class="finance__items">
+						<article class="finance__item item-finance">
+							<div class="item-finance__lable">account</div>
+							<div class="item-finance__imeg">
+								<img src="img/finance/01.svg" alt="imeg">
+							</div>
+							<h4 class="item-finance__title"> <a href="#">Business account</a></h4>
+							<div class="item-finance__text">
+								<p>Business IBANs to pay and get paid</p>
+							</div>
+						</article>
+						<article class="finance__item item-finance">
+							<div class="item-finance__lable">account</div>
+							<div class="item-finance__imeg">
+								<img src="img/finance/02.svg" alt="imeg">
+							</div>
+							<h4 class="item-finance__title"> <a href="#">Business account</a></h4>
+							<div class="item-finance__text">
+								<p>Business IBANs to pay and get paid</p>
+							</div>
+						</article>
+						<article class="finance__item item-finance">
+							<div class="item-finance__lable">account</div>
+							<div class="item-finance__imeg">
+								<img src="img/finance/03.svg" alt="imeg">
+							</div>
+							<h4 class="item-finance__title"> <a href="#">Business account</a></h4>
+							<div class="item-finance__text">
+								<p>Business IBANs to pay and get paid</p>
+							</div>
+						</article>
+						<article class="finance__item item-finance">
+							<div class="item-finance__lable">account</div>
+							<div class="item-finance__imeg">
+								<img src="img/finance/04.svg" alt="imeg">
+							</div>
+							<h4 class="item-finance__title"> <a href="#">Business account</a></h4>
+							<div class="item-finance__text">
+								<p>Business IBANs to pay and get paid</p>
+							</div>
+						</article>
+						<article class="finance__item item-finance">
+							<div class="item-finance__lable">account</div>
+							<div class="item-finance__imeg">
+								<img src="img/finance/05.svg" alt="imeg">
+							</div>
+							<h4 class="item-finance__title"> <a href="#">Business account</a></h4>
+							<div class="item-finance__text">
+								<p>Business IBANs to pay and get paid</p>
+							</div>
+						</article>
+						<article class="finance__item item-finance">
+							<div class="item-finance__lable">account</div>
+							<div class="item-finance__imeg">
+								<img src="img/finance/07.svg" alt="imeg">
+							</div>
+							<h4 class="item-finance__title"> <a href="#">Business account</a></h4>
+							<div class="item-finance__text">
+								<p>Business IBANs to pay and get paid</p>
+							</div>
+						</article>
+						<article class="finance__item item-finance">
+							<div class="item-finance__lable">account</div>
+							<div class="item-finance__imeg">
+								<img src="img/finance/08.svg" alt="imeg">
+							</div>
+							<h4 class="item-finance__title"> <a href="#">Business account</a></h4>
+							<div class="item-finance__text">
+								<p>Business IBANs to pay and get paid</p>
+							</div>
+						</article>
+						<article class="finance__item item-finance">
+							<div class="item-finance__lable">account</div>
+							<div class="item-finance__imeg">
+								<img src="img/finance/09.svg" alt="imeg">
+							</div>
+							<h4 class="item-finance__title"> <a href="#">Business account</a></h4>
+							<div class="item-finance__text">
+								<p>Business IBANs to pay and get paid</p>
+							</div>
+						</article>
+						<article class="finance__item item-finance">
+							<div class="item-finance__lable">account</div>
+							<div class="item-finance__imeg">
+								<img src="img/finance/10.svg" alt="imeg">
+							</div>
+							<h4 class="item-finance__title"> <a href="#">Business account</a></h4>
+							<div class="item-finance__text">
+								<p>Business IBANs to pay and get paid</p>
+							</div>
+						</article>
+
+					</div>
+
+
+					<button type="button" class="finance__button button  button__black button__center">Discover our cards</button>
+				</div>
 			</section>
 
 			<section class="page__pink pink">
@@ -226,6 +336,19 @@
 				</div>
 			</section>
 
+			<section class="page__sign sign">
+				<div class="sign__container">
+					<h2 class="sign__title">Sign up in minutes. Join the movement.</h2>
+					<div class="sign__text">
+						<p>Qonto’s goal is to protect what’s most precious to entrepreneurs: their time, energy and focus. We are creating the future of business banking and finance, and we’d love you to join us.</p>
+					</div>
+					<div class="sing__buttons " style="display: flex; justify-content: center; gap: 20px;">
+						<button type="button" class="sign__button button button__white">Open an account</button>
+						<button type="button" class="sign__button button  button__black">Book a demo</button>
+					</div>
+				</div>
+			</section>
+
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -281,7 +404,7 @@
 							<li><a href="#">Integrations and Partnerships</a></li>
 						</ul>
 						<button hidden data-showmore-button type="button" class="footer__column column-footer__more">
-							<span>Показати ще</span><span>Сховати</span></button>
+							<span>show more</span><span>show less</span></button>
 					</div>
 					<div data-showmore="items" data-showmore-media="1050,max" class="footer__column column-footer ">
 						<ul data-showmore-content="8" class="column-footer__content">
@@ -297,7 +420,7 @@
 							<li><a href="#">Mastercard Business Cards</a></li>
 						</ul>
 						<button hidden data-showmore-button type="button" class="footer__column column-footer__more">
-							<span>Показати ще</span><span>Сховати</span></button>
+							<span>show more</span><span>show less</span></button>
 					</div>
 					<div data-showmore="items" data-showmore-media="1050,max" class="footer__column column-footer ">
 						<ul data-showmore-content="8" class="column-footer__content">
@@ -317,7 +440,7 @@
 							<li><a href="#">Multi Account</a></li>
 						</ul>
 						<button hidden data-showmore-button type="button" class="footer__column column-footer__more">
-							<span>Показати ще</span><span>Сховати</span></button>
+							<span>show more</span><span>show less</span></button>
 					</div>
 				</div>
 
@@ -367,7 +490,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240612210511"></script>
+	<script src="js/app.min.js?_v=20240703180509"></script>
 </body>
 
 </html>
